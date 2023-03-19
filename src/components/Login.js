@@ -3,7 +3,7 @@ import { validate } from "./validate";
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
   import {notify} from "./toast"
-import { type } from "@testing-library/user-event/dist/type";
+
 import styles from "./SignUp.module.css";
 import{Link} from "react-router-dom";
 
@@ -35,7 +35,7 @@ const Login=()=>{
        if(!Object.keys(errors).length) {
         notify("You loged up successfully","success")
        }else{
-        notify("InvalidData!",type="error")
+        notify("InvalidData!","error")
         setTouched({
             email:true,
             password:true,
